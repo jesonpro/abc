@@ -1,15 +1,15 @@
 {
     "name": "Neutro-X VIP",
     "description": "🎭Neotro-X is a chat bot for WhatsApp. Makes it easy and fun to use Whatsapp.🇱🇰",
-    "logo": "🔞",
+    "logo": "https://telegra.ph/file/cc0e2bb2add47047d0fc0.jpg",
     "keywords": ["whatsapp", "userbot", "bot", "api", "ai", "Neutro-X"],
-    "repository": "",
-    "website":   "🔞",
-    "success_url": "🔞",
+    "repository": "https://github.com/jesonpro/abc",
+    "website":   "https://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX",
+    "success_url": "https://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX",
     "stack": "container",
     "env": {
         "NEUTRO_SESSION": {
-            "description": "Paste your QR session that you got from 🔞.",
+            "description": "Paste your QR session that you got from https://replit.com/@tenuh/NeotroWA-XQR.",
             "required": true
         },
         "SUDO": {
@@ -92,17 +92,17 @@
          "ALIVE_LOGO": {
             "description": "Alive message Enter your image link below to change the image. (Upload the image you want to https://imgbb.com and put that link here.)",
             "required": true,
-            "value": "🔞"
+            "value": "https://telegra.ph/file/ef9be86d4f8e07cfb9210.jpg"
         },
         "WELCOME_LOGO": {
             "description": "To change the welcome message video, enter your video link below.(Upload the video you want to https://www.mailboxdrive.com/upload/ and paste the link here.)",
             "required": true,
-            "value": "🔞"
+            "value": "https://telegra.ph/file/d969f3365028c88c7719f.mp4"
         },
         "BYE_LOGO": {
             "description": "Below is your video link to change Goodbye message video.(Upload the video you want to https://www.mailboxdrive.com/upload/ and post the link here.)",
             "required": true,
-            "value": "🔞"
+            "value": "https://telegra.ph/file/794ec421c157f4cb1cd27.mp4"
         },
         "REMOVE_BG_API_KEY": {
             "description": "Here you go to the website remove.bg and sign up and get an API key. Leave the API key in this space.",
