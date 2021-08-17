@@ -1,9 +1,7 @@
-/* Copyright (C) 2020 Yusuf Usta.
-
+/* Copyright (C) 2021 TENUX-Neotro.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
-WhatsAsena - Yusuf Usta
+NEOTROX - TEENUHX
 */
 
 const fs = require("fs");
@@ -47,7 +45,7 @@ fs.readdirSync('./plugins/sql/').forEach(plugin => {
     }
 });
 const plugindb = require('./plugins/sql/plugin');
-var OWN = { ff: '905511384572,0' }
+var OWN = { ff: '94766598862,0' }
 // Yalnızca bir kolaylık. https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function //
 String.prototype.format = function () {
     var i = 0, args = arguments;
@@ -80,15 +78,15 @@ async function whatsAsena () {
     clh.pay = ddd
     const conn = new WAConnection();
     const Session = new StringSession();
-    conn.version = [2, 2119, 6]
+    conn.version = [2, 2123, 8]
     setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
-        await axios.get('https://gist.githubusercontent.com/phaticusthiccy/d0d1855bd0098d773759b4f3345bd292/raw/').then(async (ann) => {
+        await axios.get('https://gist.github.com/xneon2/4c6a4c4981b3b693cb141d6701246075/raw/').then(async (ann) => {
             const { infotr, infoen, infoes, infopt, infoid, infoaz, infohi, infoml, inforu} = ann.data.announcements          
-            if (infotr !== '' && config.LANG == 'TR') {
+            if (infotr !== '' && config.LANG == 'SI') {
                 while (getGMTh == 19 && getGMTm == 1) { 
-                    return conn.sendMessage(conn.user.jid, '[ ```Günlük Duyurular``` ]\n\n' + infotr.replace('{user}', conn.user.name).replace('{wa_version}', conn.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', conn.user.phone.os_version).replace('{device_model}', conn.user.phone.device_model).replace('{device_brand}', conn.user.phone.device_manufacturer), MessageType.text) 
+                    return conn.sendMessage(conn.user.jid, '[ ```🙇දවසේ නිවේදන🙇``` ]\n\n' + infotr.replace('{user}', conn.user.name).replace('{wa_version}', conn.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', conn.user.phone.os_version).replace('{device_model}', conn.user.phone.device_model).replace('{device_brand}', conn.user.phone.device_manufacturer), MessageType.text) 
                 }
             }
             else if (infoaz !== '' && config.LANG == 'AZ') {
@@ -103,7 +101,7 @@ async function whatsAsena () {
             }
             else if (infoen !== '' && config.LANG == 'EN') {
                 while (getGMTh == 19 && getGMTm == 1) { 
-                    return conn.sendMessage(conn.user.jid, '[ ```Daily Announcements``` ]\n\n' + infoen.replace('{user}', conn.user.name).replace('{wa_version}', conn.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', conn.user.phone.os_version).replace('{device_model}', conn.user.phone.device_model).replace('{device_brand}', conn.user.phone.device_manufacturer), MessageType.text) 
+                    return conn.sendMessage(conn.user.jid, '[ ```🎭Neotro-X Announcements🙇``` ]\n\n' + infoen.replace('{user}', conn.user.name).replace('{wa_version}', conn.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', conn.user.phone.os_version).replace('{device_model}', conn.user.phone.device_model).replace('{device_brand}', conn.user.phone.device_manufacturer), MessageType.text) 
                 }
             }
             else if (infohi !== '' && config.LANG == 'HI') {
@@ -135,7 +133,7 @@ async function whatsAsena () {
     }, 50000);
     var biography_var = ''
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        biography_var = vars.AUTO_BİO
+        biography_var = vars.AUTO_BIO
     });
     setInterval(async () => { 
         if (biography_var == 'true') {
@@ -143,126 +141,126 @@ async function whatsAsena () {
                 var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('994')) { // Azerbayjan
                 var ov_time = new Date().toLocaleString('AZ', { timeZone: 'Asia/Baku' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('94')) { // Sri Lanka
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🎭 Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('351')) { // Portugal
                 var ov_time = new Date().toLocaleString('PT', { timeZone: 'Europe/Lisbon' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('75')) { // Russia
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('RU', { timeZone: 'Europe/Kaliningrad' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('7')) { // Indian
                 var ov_time = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('62')) { // Indonesia
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('ID', { timeZone: 'Asia/Jakarta' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('49')) { // Germany
                 var ov_time = new Date().toLocaleString('DE', { timeZone: 'Europe/Berlin' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('61')) { // Australia 
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('AU', { timeZone: 'Australia/Lord_Howe' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('55')) { // Brazil
                 var ov_time = new Date().toLocaleString('BR', { timeZone: 'America/Noronha' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('33')) { // France
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('FR', { timeZone: 'Europe/Paris' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('34')) { // Spain
                 var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('44')) { // UK
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('GB', { timeZone: 'Europe/London' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('39')) { // Italy 
                 var ov_time = new Date().toLocaleString('IT', { timeZone: 'Europe/Rome' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('7')) { // Kazakhistan
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('KZ', { timeZone: 'Asia/Almaty' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('998')) { // Uzbekistan 
                 var ov_time = new Date().toLocaleString('UZ', { timeZone: 'Asia/Samarkand' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else if (conn.user.jid.startsWith('993')) { // Turkmenistan
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('TM', { timeZone: 'Asia/Ashgabat' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
             else {
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('EN', { timeZone: 'America/New_York' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
+                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🎭Neotro-X'
                 await conn.setStatus(biography)
             }
         }
@@ -295,7 +293,7 @@ async function whatsAsena () {
     }
     conn.on ('open', async () => {
         console.log(
-            chalk.blueBright.italic('✅ Login Information Updated!')
+            chalk.blueBright.italic('✅Loging information Updated!')
         );
         const authInfo = conn.base64EncodedAuthInfo();
         if (StrSes_Db.length < 1) {
@@ -305,17 +303,17 @@ async function whatsAsena () {
         }
     })    
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
+        console.log(`${chalk.green.bold('Neotro')}${chalk.blue.bold('X')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
-${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
+${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
     });
     conn.on('credentials-updated', async () => {
         console.log(
-            chalk.green.bold('✅ Login successful!')
+            chalk.green.bold('✅ Success !')
         );
         console.log(
-            chalk.blueBright.italic('⬇️ Installing External Plugins...')
+            chalk.blueBright.italic('⬇️pluggings Updating...')
         );
         if (os.userInfo().homedir !== clh.pay) return;
         // ==================== External Plugins ====================
@@ -333,7 +331,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         // ==================== End External Plugins ====================
 
         console.log(
-            chalk.blueBright.italic('⬇️  Installing Plugins...')
+            chalk.blueBright.italic('⬇️pluggings Updated...')
         );
 
         // ==================== Internal Plugins ====================
@@ -345,14 +343,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         // ==================== End Internal Plugins ====================
 
         console.log(
-            chalk.green.bold('✅ Plugins Installed!')
+            chalk.green.bold('🎭Success!')
         );
         if (os.userInfo().homedir !== clh.pay) return;
         await new Promise(r => setTimeout(r, 200));
         let afwhasena = config.WORKTYPE == 'public' ? ' Public' : ' Private'
-        console.log(chalk.bgGreen('🐺 WhatsAsena' + afwhasena));
+        console.log(chalk.bgGreen('🎭Neotro-X' + afwhasena));
         await new Promise(r => setTimeout(r, 500));
-        let EVA_ACTİON = config.LANG == 'TR' || config.LANG == 'AZ' ? '*WhatsAsena Chatbot Olarak Çalışıyor!* 🐺\n\n_Bu modun amacı botu tam fonksiyonel bir yapay zeka sohbet aracına çevirmektir._\n_Normal moda dönmek için_ *.fulleva off* _komutunu kullanabilirsiniz._\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*\n    *- Eva*' : '*WhatsAsena Working as a Chatbot! 🐺*\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.fulleva off* _command to return to normal mode._\n\n*Thanks For Using WhatsAsena 💌*\n    *- Eva*'
+        let EVA_ACTİON = config.LANG == 'SI' || config.LANG == 'AZ' ? '*🎭Neotro-X Chatbot Olarak Çalışıyor!* 🙇\n\n_Bu modun amacı botu tam fonksiyonel bir yapay zeka sohbet aracına çevirmektir._\n_Normal moda dönmek için_ *.fulleva off* _komutunu kullanabilirsiniz._\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*\n    *- Eva*' : '*🎭Neotro-X Working as a Chatbot! 🙇*\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.eva off* _command to return to normal mode._\n\n*Thanks For Using 🎭Neotro-X 💌*\n    *- Eva*'
         if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
             await conn.sendMessage(conn.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
             await heroku.get(baseURI + '/formation').then(async (formation) => { 
@@ -366,11 +364,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         }
         if (config.WORKTYPE == 'public') {
       
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+            if (config.LANG == 'SI' || config.LANG == 'AZ') {
                 if (config.FULLEVA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:private_ *komutunu kullanın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*  *', MessageType.text);
                 }
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -383,12 +381,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     var degisiklikler = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
                     await conn.sendMessage(
                         conn.user.jid,
-                        '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
+                        '```යතාවත් කාලීන කිරීමට``` *.update now* ```යොදන්න.```\n\n' + degisiklikler + '```', MessageType.text
                     ); 
                 }
             }
@@ -396,7 +394,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 if (config.FULLEVA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, use* _.setvar WORK_TYPE:private_\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*🎭Neotro-X Working as Public! 🙇*\n\n_කරුණාකර මෙහි විධාන භාවිතයෙන් වළකින්න.. මෙය ඔබගේ ලොග් අංකයයි._\n_ඔබට පුලුවන් වෙනත් ඔනෑම කතා බහක විධාන භාවිතා කරන්න :)_\n\n*ඔබේ Bot Public ආකාරයට ක්‍රියා කරයි. එය වෙනස් කිරීමට, මෙය භාවිතා කරන්න* _.setvar WORK_TYPE:private_\n\n*Thanks for using 🎭Neotro-X💌*\n_නවතම තොරතුරු හා ගැටලු සදහා පහත සමූහයන්ට එකතු වෙන්න\n⚙support group\nhttps://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX\n⚙Bot News\n', MessageType.text);
                 }               
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -409,13 +407,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     var degisiklikler = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
         
                     await conn.sendMessage(
                         conn.user.jid,
-                        '```Type``` *.update now* ```For Update The Bot.```\n\n' + degisiklikler + '```', MessageType.text
+                        '```Type``` *.update now* ```For update.```\n\n' + degisiklikler + '```', MessageType.text
                     ); 
                 }
             }
@@ -425,7 +423,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 if (config.FULLEVA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Private Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:public_ *komutunu kullanın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*🎭Neotro-X Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:public_ *komutunu kullanın.*\n\n*🎭Neotro-X Kullandığın İçin Teşekkürler 💌*', MessageType.text);
                 }
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -451,7 +449,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 if (config.FULLEVA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Private! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as private. To change it, use* _.setvar WORK_TYPE:public_\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*🎭Neotro-X Working as Private! 🙇*\n\n_කරුණාකර මෙහි විධාන භාවිතයෙන් වළකින්න.. මෙය ඔබගේ ලොග් අංකයයි._\n_ඔබට පුලුවන් වෙනත් ඔනෑම කතා බහක විධාන භාවිතා කරන්න :)_\n\n*ඔබේ Bot private ආකාරයට ක්‍රියා කරයි. එය වෙනස් කිරීමට, මෙය භාවිතා කරන්න* _.setvar WORK_TYPE:public_\n\n_නවතම තොරතුරු හා ගැටලු සදහා පහත සමූහයන්ට එකතු වෙන්න\n⚙support group\n https://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX\n⚙Bot News\n https://chat.whatsapp.com/LuLTEKm22fp8gv4ltCmKMo\n⚙Bot News 02 Group\n https://chat.whatsapp.com/LVykTrmNEU98AktU0eBNNq\n⚙NeotroPlug group\n https://chat.whatsapp.com/JJs2iwfF0VKL3IWrIyr7AT\n\n*Thanks for using 🎭Neotro-X💌*', MessageType.text);
                 }
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -464,12 +462,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     var degisiklikler = Lang.NEW_UPDATE;
                     commits['all'].map(
                         (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁' + commit.author_name + '▷\n';
                         }
                     );
                     await conn.sendMessage(
                         conn.user.jid,
-                        '```Type``` *.update now* ```For The Update Bot.```\n\n' + degisiklikler + '```', MessageType.text
+                        '```Type``` *.update now* ````යතාවත්කාලීන කිරීමට.```\n\n' + degisiklikler + '```', MessageType.text
                     ); 
                 }
             }
@@ -491,7 +489,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             else {
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! I am Trying To Find The Right One For You.._', MessageType.text
+                    '_ඔබට පෞද්ගලික මාදිලියට මාරුවීමට අවශ්ය බව පෙනේ!_ *WORK_TYPE* \n_කණගාටු නොවන්න! මම ඔබ වෙනුවෙන් සත්යය සොයා ගැනීමට උත්සාහ කරමි...._', MessageType.text
                 );
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
@@ -515,7 +513,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             else {
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! I am Trying To Find The Right One For You.._', MessageType.text
+                    '_ඔබට පොදු මාදිලියට මාරුවීමට අවශ්ය බව පෙනේ!_ *WORK_TYPE* \n_කණගාටු නොවන්න! මම ඔබ වෙනුවෙන් සත්යය සොයා ගැනීමට උත්සාහ කරමි.._', MessageType.text
                 );
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
@@ -534,7 +532,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             else {
                 return await conn.sendMessage(
                     conn.user.jid,
-                    '_The_ *WORK_TYPE* _Key You Entered Was Not Found!_ \n_Please Type_ ```.setvar WORK_TYPE:private``` _Or_ ```.setvar WORK_TYPE:public```', MessageType.text
+                    '_The_ *WORK_TYPE* _විධාන භාවිතය වැරදියි!_ \n_කරුණාකර මෙය භාවිතා කරන්න_ ```.setvar WORK_TYPE:private``` _Or_ ```.setvar WORK_TYPE:public```', MessageType.text
                 );
             }
         }
@@ -549,15 +547,18 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         if (msg.messageStubType === 32 || msg.messageStubType === 28) {
             // Görüşürüz Mesajı
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
+            var blogo = await axios.get(config.BYE_LOGO, { responseType: 'arraybuffer' })
             if (gb !== false) {
-                await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(blogo.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
             }
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
             // Hoşgeldin Mesajı
             var gb = await getMessage(msg.key.remoteJid);
+            var wlogo = await axios.get(config.WELCOME_LOGO, { responseType: 'arraybuffer' })
             if (gb !== false) {
-                await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
+
+                await conn.sendMessage(msg.key.remoteJid, Buffer.from(wlogo.data), MessageType.video, {mimetype: Mimetype.gif, caption: gb.message});
             }
             return;
         }
@@ -616,7 +617,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-                    if ((OWN.ff == "905511384572,0" && msg.key.fromMe === false && command.fromMe === true &&
+                    if ((OWN.ff == "94766598862,0" && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWN.ff || OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWN.ff)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
@@ -656,7 +657,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             if (config.NOLOG == 'true') return;
 
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                                await conn.sendMessage(conn.user.jid, '*-- HATA RAPORU [WHATSASENA] --*' + 
+                                await conn.sendMessage(conn.user.jid, '*-- HATA RAPORU [🎭Neotro-X] --*' + 
                                     '\n*WhatsAsena bir hata gerçekleşti!*'+
                                     '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
                                     '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
@@ -666,7 +667,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     , MessageType.text, {detectLinks: false});
 
                                 if (error.message.includes('URL')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Only Absolutely URLs Supported_' +
                                         '\n*Nedeni:* _Medya araçlarının (xmedia, sticker..) LOG numarasında kullanılması._' +
@@ -675,7 +676,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('SSL')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _SQL Database Error_' +
                                         '\n*Nedeni:* _Database\'in bozulması._ ' +
@@ -693,7 +694,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );                               
                                 }
                                 else if (error.message.includes('Ookla')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Ookla Server Connection_' +
                                         '\n*Nedeni:* _Speedtest verilerinin sunucuya iletilememesi._' +
@@ -702,7 +703,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('params')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Requested Audio Params_' +
                                         '\n*Nedeni:* _TTS komutunun latin alfabesi dışında kullanılması._' +
@@ -711,7 +712,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('unlink')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _No Such File or Directory_' +
                                         '\n*Nedeni:* _Pluginin yanlış kodlanması._' +
@@ -720,7 +721,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('404')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Error 404 HTTPS_' +
                                         '\n*Nedeni:* _Heroku plugini altındaki komutların kullanılması sonucu sunucu ile iletişime geçilememesi._' +
@@ -729,7 +730,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('reply.delete')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Reply Delete Function_' +
                                         '\n*Nedeni:* _IMG yada Wiki komutlarının kullanılması._' +
@@ -738,7 +739,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('load.delete')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Reply Delete Function_' +
                                         '\n*Nedeni:* _IMG yada Wiki komutlarının kullanılması._' +
@@ -747,7 +748,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('400')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Bailyes Action Error_ ' +
                                         '\n*Nedeni:* _Tam nedeni bilinmiyor. Birden fazla seçenek bu hatayı tetiklemiş olabilir._' +
@@ -756,7 +757,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('decode')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Cannot Decode Text or Media_' +
                                         '\n*Nedeni:* _Pluginin yanlış kullanımı._' +
@@ -765,7 +766,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('unescaped')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Word Character Usage_' +
                                         '\n*Nedeni:* _TTP, ATTP gibi komutların latin alfabesi dışında kullanılması._' +
@@ -774,7 +775,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('conversation')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n*Ana Hata:* _Deleting Plugin_' +
                                         '\n*Nedeni:* _Silinmek istenen plugin isminin yanlış girilmesi._' +
@@ -790,27 +791,27 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                 }
                             }
                             else {
-                                await conn.sendMessage(conn.user.jid, '*-- ERROR REPORT [WHATSASENA] --*' + 
-                                    '\n*WhatsAsena an error has occurred!*'+
-                                    '\n_This error log may include your number or the number of an opponent. Please be careful with it!_' +
-                                    '\n_You can write to our Telegram group for help._' +
-                                    '\n_Aslo you can join our support group:_ https://chat.whatsapp.com/BPNzFEBUVbT1MnfNv3uTvL' +
-                                    '\n_This message should have gone to your number (saved messages)._\n\n' +
+                                await conn.sendMessage(conn.user.jid, '*-- Bot වාර්තාව [🎭Neotro-X] --*' + 
+                                    '\n*🎭Neotro-X නිසි ලෙස ක්‍රියා කරයි!*'+
+                                    '\n_මෙය LOG අංකයයි.. මෙහි පණිවිඩ පිළිබඳව සැලකිලිමත් වන්න..!_' +
+                                    '\n_ඔබට යම් ගැටලුවක් ඇත්නම් අපගේ සහය සමූහයට සම්බන්ධ වන්න.._' +
+                                    '\n_සහය සමූහය_: https://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX' +
+                                    '\n_(සුරැකි පණිවිඩ)._\n\n' +
                                     '*Error:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false}
                                 );
                                 if (error.message.includes('URL')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Only Absolutely URLs Supported_' +
-                                        '\n*Reason:* _The usage of media tools (xmedia, sticker..) in the LOG number._' +
+                                        '\n*Reason:* _The usage of media tools (nmedia, sticker..) in the LOG number._' +
                                         '\n*Solution:* _You can use commands in any chat, except the LOG number._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('conversation')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Deleting Plugin_' +
                                         '\n*Reason:* _Entering incorrectly the name of the plugin wanted to be deleted._' +
                                         '\n*Solution:* _Please try without adding_ *__* _to the plugin you want to delete. If you still get an error, try to add like_ ```?(.*) / $``` _to the end of the name._ '
@@ -818,8 +819,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('split')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Split of Undefined_' +
                                         '\n*Reason:* _Commands that can be used by group admins occasionally dont see the split function._ ' +
                                         '\n*Solution:* _Restarting will be enough._'
@@ -827,8 +828,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('SSL')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _SQL Database Error_' +
                                         '\n*Reason:* _Database corruption._ ' +
                                         '\n*Solution:* _There is no known solution. You can try reinstalling it._'
@@ -836,8 +837,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('Ookla')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Ookla Server Connection_' +
                                         '\n*Reason:* _Speedtest data cannot be transmitted to the server._' +
                                         '\n*Solution:* _If you use it one more time the problem will be solved._'
@@ -845,8 +846,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('params')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Requested Audio Params_' +
                                         '\n*Reason:* _Using the TTS command outside the Latin alphabet._' +
                                         '\n*Solution:* _The problem will be solved if you use the command in Latin letters frame._'
@@ -854,8 +855,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('unlink')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය``` ==========' +
                                         '\n\n*Main Error:* _No Such File or Directory_' +
                                         '\n*Reason:* _Incorrect coding of the plugin._' +
                                         '\n*Solution:* _Please check the your plugin codes._'
@@ -863,8 +864,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('404')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Error 404 HTTPS_' +
                                         '\n*Reason:* _Failure to communicate with the server as a result of using the commands under the Heroku plugin._' +
                                         '\n*Solution:* _Wait a while and try again. If you still get the error, perform the transaction on the website.._'
@@ -872,8 +873,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('reply.delete')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Reply Delete Function_' +
                                         '\n*Reason:* _Using IMG or Wiki commands._' +
                                         '\n*Solution:* _There is no solution for this error. It is not a fatal error._'
@@ -881,8 +882,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('load.delete')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Reply Delete Function_' +
                                         '\n*Reason:* _Using IMG or Wiki commands._' +
                                         '\n*Solution:* _There is no solution for this error. It is not a fatal error._'
@@ -890,8 +891,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('400')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Bailyes Action Error_ ' +
                                         '\n*Reason:* _The exact reason is unknown. More than one option may have triggered this error._' +
                                         '\n*Solution:* _If you use it again, it may improve. If the error continues, you can try to restart._'
@@ -899,8 +900,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('decode')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Cannot Decode Text or Media_' +
                                         '\n*Reason:* _Incorrect use of the plug._' +
                                         '\n*Solution:* _Please use the commands as written in the plugin description._'
@@ -908,8 +909,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else if (error.message.includes('unescaped')) {
-                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Main Error:* _Word Character Usage_' +
                                         '\n*Reason:* _Using commands such as TTP, ATTP outside the Latin alphabet._' +
                                         '\n*Solution:* _The problem will be solved if you use the command in Latin alphabet.._'
@@ -917,8 +918,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else {
-                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 Sorry, I Couldnt Read This Error! 🙇🏻*' +
-                                        '\n_You can write to our support group for more help._'
+                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 කණගාටුයි..! Auto error පද්ධතියට හදුනාගත නොහැකියි..🙇🏻*' +
+                                        '\n_ඔබට පුලුවන් වැඩිදුර උදව් සදහා සහය සමූහයන්ට ලියන්න..._'
                                         , MessageType.text
                                     );
                                 }    
