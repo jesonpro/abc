@@ -394,7 +394,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                 if (config.FULLEVA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*🎭Neotro-X Working as Public! 🙇*\n\n_කරුණාකර මෙහි විධාන භාවිතයෙන් වළකින්න.. මෙය ඔබගේ ලොග් අංකයයි._\n_ඔබට පුලුවන් වෙනත් ඔනෑම කතා බහක විධාන භාවිතා කරන්න :)_\n\n*ඔබේ Bot Public ආකාරයට ක්‍රියා කරයි. එය වෙනස් කිරීමට, මෙය භාවිතා කරන්න* _.setvar WORK_TYPE:private_\n\n*Thanks for using 🎭Neotro-X💌*\n_නවතම තොරතුරු හා ගැටලු සදහා පහත සමූහයන්ට එකතු වෙන්න\n⚙support group\nhttps://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX\n⚙Bot News\n', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*🎭Neotro-X Working  As Public🙇*\n\n_Please do not try any commands here. This is your log number._\n_You can try commands anywhere else :)_\n\n_Type_ *.Admin or .neotro* _to get your Command list._\n\n_Your bot in Public Mode. To change, use_ ```.setvar WORK_TYPE:private```\n\n *Thank you for using 🎭Neotro-X\n\n🧚‍♂️Get Bot Updates And News Join Our Group\nhttps://chat.whatsapp.com/LVykTrmNEU98AktU0eBNNq\n', MessageType.text);
                 }               
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -449,7 +449,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                 if (config.FULLEVA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*🎭Neotro-X Working as Private! 🙇*\n\n_කරුණාකර මෙහි විධාන භාවිතයෙන් වළකින්න.. මෙය ඔබගේ ලොග් අංකයයි._\n_ඔබට පුලුවන් වෙනත් ඔනෑම කතා බහක විධාන භාවිතා කරන්න :)_\n\n*ඔබේ Bot private ආකාරයට ක්‍රියා කරයි. එය වෙනස් කිරීමට, මෙය භාවිතා කරන්න* _.setvar WORK_TYPE:public_\n\n_නවතම තොරතුරු හා ගැටලු සදහා පහත සමූහයන්ට එකතු වෙන්න\n⚙support group\n https://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX\n⚙Bot News\n https://chat.whatsapp.com/LuLTEKm22fp8gv4ltCmKMo\n⚙Bot News 02 Group\n https://chat.whatsapp.com/LVykTrmNEU98AktU0eBNNq\n⚙NeotroPlug group\n https://chat.whatsapp.com/JJs2iwfF0VKL3IWrIyr7AT\n\n*Thanks for using 🎭Neotro-X💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*🎭Neotro-X Working  As Private🙇*\n\n_Please do not try any commands here. This is your log number._\n_You can try commands anywhere else :)_\n\n_Type_ *.Admin or .neotro* _to get your Command list._\n\n_Your bot in Private  Mode. To change, use_ ```.setvar WORK_TYPE:public```\n\n *Thank you for using 🎭Neotro-X\n\n🧚‍♂️Get Bot Updates And News Join Our Group\nhttps://chat.whatsapp.com/LVykTrmNEU98AktU0eBNNq\n', MessageType.text);
                 }
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -467,7 +467,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                     );
                     await conn.sendMessage(
                         conn.user.jid,
-                        '```Type``` *.update now* ````යතාවත්කාලීන කිරීමට.```\n\n' + degisiklikler + '```', MessageType.text
+                        '```Type``` *.update now* ````For Update .```\n\n' + degisiklikler + '```', MessageType.text
                     ); 
                 }
             }
