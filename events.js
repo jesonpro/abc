@@ -43,6 +43,6 @@ function teenu(info, func) {
 }
 
 module.exports = {
-    teenu: addCommand,
+    teenu: teenu,
     commands: Commands
 }
