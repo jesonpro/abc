@@ -85,7 +85,7 @@
             "value": "false"
         },
         "MENU": {
-            "description": "Customizeable commands list request command. Keep "neotro" if you don't want to change.",
+            "description": "Customizeable commands list request command. Keep neotro if you don't want to change.",
             "required": true,
             "value": "neotro"
         },
