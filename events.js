@@ -8,7 +8,7 @@ NEOTROX - TEENUHX
 var config = require('./config');
 var Commands = [];
 
-function teenu(info, func) {
+function tenu(info, func) {
     // Basit bir fonksiyon, komut eklemek için.
     var types = ['photo', 'image', 'text', 'message'];
 
@@ -43,6 +43,6 @@ function teenu(info, func) {
 }
 
 module.exports = {
-    teenu: teenu,
+    tenu: tenu,
     commands: Commands
 }
