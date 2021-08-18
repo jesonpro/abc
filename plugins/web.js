@@ -6,7 +6,7 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const Asena = require('../events');
+const Neutro = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const speedTest = require('@lh2020/speedtest-net');
 const TinyURL = require('tinyurl');
@@ -17,7 +17,7 @@ const Lang = Language.getString('web');
 const SLang = Language.getString('webss');
 /*
 var LANG = { RES: '' }
-if (Config.LANG == 'TR') LANG.RES == '*Komut Bulunamadı!*\n*Benzer Komut:*'
+if (Config.LANG == 'SI') LANG.RES == '*විධානයක් සොයා ගත නොහැකියි..!*\n*similar විධානය:*'
 if (Config.LANG == 'EN') LANG.RES == '*Command not Found!*\n*Similar Command:*'
 if (Config.LANG == 'AZ') LANG.RES == '*Komanda tapılmadı!*\n*Oxşar əmr:*'
 if (Config.LANG == 'PT') LANG.RES == '*Comando não encontrado!*\n*Comando Similar:*'
@@ -382,7 +382,7 @@ function speedText(speed) {
     return `${bits.toFixed(places[unit])} ${units[unit]}bps`;
 }
 
-Asena.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
+Neutro.tenu({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
     var msg = await message.reply(Lang.SPEEDTESTING);
     var st = await speedTest({acceptLicense: true, acceptGdpr: true});
     
@@ -396,7 +396,7 @@ Asena.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}
     await msg.delete();
 }));
 
-Asena.addCommand({pattern: 'ping$', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
+Neutro.tenu({pattern: 'ping$', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
   var start = new Date().getTime();
   await message.sendMessage('```Ping!```');
   var end = new Date().getTime();
@@ -407,7 +407,7 @@ Asena.addCommand({pattern: 'ping$', fromMe: true, deleteCommand: false, desc: La
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
+    Neutro.tenu({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
 
@@ -418,7 +418,7 @@ if (Config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
         });
     }));
-    Asena.addCommand({pattern: 'calc ?(.*)', fromMe: true, desc: Lang.CALC }, (async (message, match) => {
+    Neutro.tenu({pattern: 'calc ?(.*)', fromMe: true, desc: Lang.CALC }, (async (message, match) => {
         if (match[1].length < 4) { return await message.client.sendMessage(message.jid,Lang.VALİD, MessageType.text) }
         if (match[1].includes('+')) { var split = match[1].split('+'), sonsayi = split[1], ilksayi = split[0]
             var result = -(-ilksayi - sonsayi)
@@ -448,7 +448,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'short ?(.*)', fromMe: false, desc: Lang.URL}, (async (message, match) => {
+    Neutro.tenu({pattern: 'short ?(.*)', fromMe: false, desc: Lang.URL}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
 
@@ -459,7 +459,7 @@ else if (Config.WORKTYPE == 'public') {
             await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
         });
     }));
-    Asena.addCommand({pattern: 'calc ?(.*)', fromMe: false, desc: Lang.CALC }, (async (message, match) => {
+    Neutro.tenu({pattern: 'calc ?(.*)', fromMe: false, desc: Lang.CALC }, (async (message, match) => {
         if (match[1].length < 4) { return await message.client.sendMessage(message.jid,Lang.VALİD, MessageType.text) }
         if (match[1].includes('+')) { var split = match[1].split('+'), sonsayi = split[1], ilksayi = split[0]
             var result = -(-ilksayi - sonsayi)
