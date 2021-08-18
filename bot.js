@@ -662,8 +662,8 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                     '\n_මෙය ඔබගේ LOG අංකයයි.මෙහි විධාන භවිතයෙන් වළකින්න!_' +
                                     '\n_ඔබට යම් ගැටලුවක් ඇතිනම් සහය සමූහය වෙත ලියන්න._' +
                                     '\n_මෙහි පණිවිඩ පිළිබඳ සැලකිලිමත් වන්න (සුරැකි පණිවිඩ)._' +
-                                    '\n_Hatayı https://chat.whatsapp.com/BPNzFEBUVbT1MnfNv3uTvL bu gruba iletebilirsiniz._\n\n' +
-                                    '*Gerçekleşen Hata:* ```' + error + '```\n\n'
+                                    '\n*සහය සමූහය:* _https://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX_\n\n' +
+                                    '*සිදු වී ඇති දෝෂය:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false});
 
                                 if (error.message.includes('URL')) {
@@ -724,8 +724,8 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*🚫ප්‍රධාන දෝෂය:* _Error 404 HTTPS_' +
-                                        '\n*🎭හේතුව:* _Heroku plugini altındaki komutların kullanılması sonucu sunucu ile iletişime geçilememesi._' +
-                                        '\n*🧚‍♂️විසඳුම:* _Biraz bekleyip tekrar deneyin. Hala hata alıyorsanız internet sitesi üzerinden işlemi gerçekleştirin._'
+                                        '\n*🎭හේතුව:* _Heroku plugins යටතේ ඇති විධානයන් භාවිතා කිරීම හේතුවෙන් සේවාදායකයා සමඟ සන්නිවේදනය කිරීමට නොහැකි වීම.' +
+                                        '\n*🧚‍♂️විසඳුම:* _මිනිත්තු කිහිපයක් රැඳී සිටින්න. Developers විසින් මෙම දෝෂය නිවැරදි කරනු ඇත.._'
                                         , MessageType.text
                                     );
                                 }
@@ -733,8 +733,8 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*🚫ප්‍රධාන දෝෂය:* _Reply Delete Function_' +
-                                        '\n*🎭හේතුව:* _IMG yada Wiki komutlarının kullanılması._' +
-                                        '\n*🧚‍♂️විසඳුම:* _Bu hatanın çözümü yoktur. Önemli bir hata değildir._'
+                                        '\n*🎭හේතුව:* _IMG හෝ Wiki විධානයන් භාවිතා කිරීම. (Official වට්ස්ඇප් භාවිතය.)_' +
+                                        '\n*🧚‍♂️විසඳුම:* _මෙම දෝෂය සඳහා විසඳුමක් නොමැත. එය fatal error නොවේ._'
                                         , MessageType.text
                                     );
                                 }
@@ -751,8 +751,8 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*🚫ප්‍රධාන දෝෂය:* _Bailyes Action Error_ ' +
-                                        '\n*🎭හේතුව:* _Tam nedeni bilinmiyor. Birden fazla seçenek bu hatayı tetiklemiş olabilir._' +
-                                        '\n*🧚‍♂️විසඳුම:* _Bir kez daha kullanırsanız düzelebilir. Hata devam ediyorsa restart atmayı deneyebilirsiniz._'
+                                        '\n*🎭හේතුව:* _Heroku plugins යටතේ ඇති විධානයන් භාවිතා කිරීම හේතුවෙන් සේවාදායකයා සමඟ සන්නිවේදනය කිරීමට නොහැකි වීම._' +
+                                        '\n*🧚‍♂️විසඳුම:* __ඔබ එය නැවත භාවිතා කළහොත් එය වැඩිදියුණු විය හැකිය. දෝෂය දිගටම පැවතුනහොත්, ඔබට restart කිරීමට උත්සාහ කළ හැකිය._'
                                         , MessageType.text
                                     );
                                 }
@@ -760,8 +760,8 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*🚫ප්‍රධාන දෝෂය:* _Cannot Decode Text or Media_' +
-                                        '\n*🎭හේතුව:* _Pluginin yanlış kullanımı._' +
-                                        '\n*🧚‍♂️විසඳුම:* _Lütfen komutları plugin açıklamasında yazdığı gibi kullanın._'
+                                        '\n*🎭හේතුව:* _භාවිතය වැරදියි._' +
+                                        '\n*🧚‍♂️විසඳුම:* _.neotro ලැයිස්තුවෙ ලියා ඇති පරිදි කරුණාකර විධානයන් භාවිතා කරන්න._'
                                         , MessageType.text
                                     );
                                 }
@@ -778,8 +778,8 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*ප්‍රධාන දෝෂය:* _Deleting Plugin_' +
-                                        '\n*🎭හේතුව:* _Silinmek istenen plugin isminin yanlış girilmesi._' +
-                                        '\n*🧚‍♂️විසඳුම:* _Lütfen silmek istediğiniz pluginin başına_ *__* _koymadan deneyin. Hala hata alıyorsanız ismin sonundaki_ ```?(.*) / $``` _gibi ifadeleri eksiksiz girin._'
+                                        '\n*🎭හේතුව:* _ප්ලගීනය ඉවත් කිරීම වැරදියි._' +
+                                        '\n*🧚‍♂️විසඳුම:* _කරුණාකර මෙය නොමැතිව උත්සහා කරන්න_ *__* _නැවතත් දෝෂ පැමිනියොත් මෙය උත්සහා කරන්න_ ```?(.*) / $``` _නමෙ අගට._'
                                         , MessageType.text
                                     );
                                 }
@@ -793,7 +793,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                             else {
                                 await conn.sendMessage(conn.user.jid, '*-- Bot Report  [🎭Neotro-X] --*' + 
                                     '\n*🎭Neotro-X Working Perfectly!*'+
-                                    '\n_This is your LOG Number.. මෙහි පණිවිඩ පිළිබඳව සැලකිලිමත් වන්න..!_' +
+                                    '\n_This is your LOG Number.. Dont Try Command here..!_' +
                                     '\n_You can write to our support groups for more help.._' +
                                     '\n_Support Group_: https://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX' +
                                     '\n_(Saved Messages)._\n\n' +
@@ -936,7 +936,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
         await conn.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
+            console.log(chalk.red.bold('Restart old version...'))
             conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await conn.connect();
