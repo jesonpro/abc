@@ -1,4 +1,4 @@
-const Asena = require('../events');
+const Neutro = require('../events');
 const { MessageType, Mimetype, GroupSettingChange, MessageOptions } = require('@adiwajshing/baileys');
 const Axios = require('axios');
 const fs = require('fs');
@@ -16,7 +16,7 @@ var SRİ_USER = ''
 var RU_USER = ''
 var USA_USER = ''
 var OTHER = ''
-if (CON.LANG == 'TR') ADMİN_USER = '*Admin Sayısı:*', USER_USER = '*Üye Sayısı:*', TR_USER = '*Türk Üye Sayısı:*', Hİ_USER = '*Hint Üye Sayısı:*', AZ_USER = '*Azeri Üye Sayısı:*', SRİ_USER = '*Sri Lanka Üye Sayısı:*', RU_USER = '*Rus Üye Sayısı:*', USA_USER = '*ABD Üye Sayısı:*', OTHER = '*Diğer Üye Sayısı:*'
+if (CON.LANG == 'SI') ADMİN_USER = '*Admin ගණන:*', USER_USER = '*සමාජිකයන් ගණන:*', TR_USER = '*ටර්කිශ් සමාජිකයබ්:*', Hİ_USER = '*ඉන්දියන් සමාජිකයක්:*', AZ_USER = '*Azeri සමාජිකයන්:*', SRİ_USER = '*ශ්‍රි ලාංකික සමාජිකයන්:*', RU_USER = '*රුසියානු සමාජිකයන්:*', USA_USER = '*USA සමාජිකයන්:*', OTHER = '*වෙනත්:*'
 if (CON.LANG == 'EN') ADMİN_USER = '*Admin Count:*', USER_USER = '*Member Count:*', TR_USER = '*Turkish Member Count:*', Hİ_USER = '*Indian Member Count:*', AZ_USER = '*Azerbayjan Member Count:*', SRİ_USER = '*Sri Lanka Member Count:*', RU_USER = '*Russian Member Count:*', USA_USER = '*USA Member Count:*', OTHER = '*Other Member Count:*'
 if (CON.LANG == 'AZ') ADMİN_USER = '*Admin sayı:*', USER_USER = '*Üzv sayı:*', TR_USER = '*Türk Üzv Sayısı:*', Hİ_USER = '*Hindistan üzv sayı:*', AZ_USER = '*Azərbaycan Üzv Sayısı:*', SRİ_USER = '*Şri Lanka üzv sayı:*', RU_USER = '*Rusiya Üzv Sayısı:*', USA_USER = '*ABD Üzv sayı:*', OTHER = '*Digər üzv sayı:*'
 if (CON.LANG == 'ES') ADMİN_USER = '*Recuento de administradores:*', USER_USER = '*Cuenta de miembro:*', TR_USER = '*Recuento de miembros turcos:*', Hİ_USER = '*Recuento de miembros indios:*', AZ_USER = '*Recuento de miembros de Azerbaiyán:*', SRİ_USER = '*Recuento de miembros de Sri Lanka:*', RU_USER = '*Recuento de miembros rusos:*', USA_USER = '*Recuento de miembros de USA:*', OTHER = '*Otro recuento de miembros:*'
@@ -27,7 +27,7 @@ if (CON.LANG == 'ID') ADMİN_USER = '*Jumlah Admin:*', USER_USER = '*Jumlah angg
 if (CON.LANG == 'ML') ADMİN_USER = '*അഡ്‌മിൻ എണ്ണം:*', USER_USER = '*അംഗങ്ങളുടെ എണ്ണം:*', TR_USER = '*ടർക്കിഷ് അംഗങ്ങളുടെ എണ്ണം:*', Hİ_USER = '*ഇന്ത്യൻ അംഗങ്ങളുടെ എണ്ണം:*', AZ_USER = '*അസർബൈജാൻ അംഗങ്ങളുടെ എണ്ണം:*', SRİ_USER = '*ശ്രീലങ്ക അംഗങ്ങളുടെ എണ്ണം:*', RU_USER = '*റഷ്യൻ അംഗങ്ങളുടെ എണ്ണം:*', USA_USER = '*യു‌എസ്‌എ അംഗങ്ങളുടെ എണ്ണം:*', OTHER = '*മറ്റ് അംഗങ്ങളുടെ എണ്ണം:*'
 
 if (CON.WORKTYPE == 'private') {
-    Asena.addCommand({ pattern: 'whois$', fromMe: true, desc: Lang.PL_DESC }, async (message, match) => { 
+    Neutro.tenu({ pattern: 'whois$', fromMe: true, desc: Lang.PL_DESC }, async (message, match) => { 
         if (message.jid.includes('-')) {
             var json = await message.client.groupMetadataMinimal(message.jid) 
             var code = await message.client.groupInviteCode(message.jid)
@@ -94,7 +94,7 @@ if (CON.WORKTYPE == 'private') {
     });
 }
 else if (CON.WORKTYPE == 'public') {
-    Asena.addCommand({ pattern: 'whois$', fromMe: false, desc: Lang.PL_DESC }, async (message, match) => { 
+    Neutro.tenu({ pattern: 'whois$', fromMe: false, desc: Lang.PL_DESC }, async (message, match) => { 
         if (message.jid.includes('-')) {
             var json = await message.client.groupMetadataMinimal(message.jid) 
             var code = await message.client.groupInviteCode(message.jid)
