@@ -1,12 +1,12 @@
 
-const Asena = require('../events');
+const Neutro = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('NEUTRO');
 
-    Asena.addCommand({pattern: 'help', fromMe: true, desc: Lang.NHELP}, (async (message, match) => {
+    Neutro.tenu({pattern: 'help', fromMe: true, desc: Lang.NHELP}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -100,7 +100,7 @@ const Lang = Language.getString('NEUTRO');
 
  if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'help', fromMe: false, desc: Lang.AN}, (async (message, match) => {
+    Neutro.tenu({pattern: 'help', fromMe: false, desc: Lang.AN}, (async (message, match) => {
 
     var r_text = new Array ();
 
