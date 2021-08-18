@@ -4,7 +4,7 @@ Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
 WhatsAsena - Yusuf Usta
-
+*/
 
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
@@ -14,6 +14,8 @@ const fs = require('fs');
 const Language = require('../language');
 const Lang = Language.getString('profile');
 
+
+/*
 Asena.addCommand({pattern: 'kickme$', fromMe: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {
     if (Config.KICKMEMSG == 'default') { 
         await message.client.sendMessage(message.jid,Lang.KICKME,MessageType.text);
