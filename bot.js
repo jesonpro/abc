@@ -657,11 +657,11 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                             if (config.NOLOG == 'true') return;
 
                             if (config.LANG == 'SI' || config.LANG == 'AZ') {
-                                await conn.sendMessage(conn.user.jid, '*-- ඔබේ Bot නිසි ලෙස ක්‍රියාකරයි [🎭Neotro-X] --*' + 
-                                    '\n*WhatsAsena bir hata gerçekleşti!*'+
-                                    '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
-                                    '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
-                                    '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._' +
+                                await conn.sendMessage(conn.user.jid, '*-- Bot වාර්තාව [🎭Neotro-X] --*' + 
+                                    '\n*🎭Neotro-X නිසි ලෙස ක්‍රියාකරයි*'+
+                                    '\n_මෙය ඔබගේ LOG අංකයයි.මෙහි විධාන භවිතයෙන් වළකින්න!_' +
+                                    '\n_ඔබට යම් ගැටලුවක් ඇතිනම් සහය සමූහය වෙත ලියන්න._' +
+                                    '\n_මෙහි පණිවිඩ පිළිබඳ සැලකිලිමත් වන්න (සුරැකි පණිවිඩ)._' +
                                     '\n_Hatayı https://chat.whatsapp.com/BPNzFEBUVbT1MnfNv3uTvL bu gruba iletebilirsiniz._\n\n' +
                                     '*Gerçekleşen Hata:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false});
