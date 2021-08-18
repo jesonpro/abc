@@ -1,11 +1,10 @@
-/* 
-Heroku plugin for WhatsAsena - W4RR10R
+/* Copyright (C) 2021 TENUX-Neotro.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta
+NEOTROX - TEENUHX
 */
 
-const Asena = require('../events');
+const tenu = require('../events');
 const Config = require('../config');
 const Heroku = require('heroku-client');
 const {secondsToHms} = require('./afk');
@@ -24,7 +23,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
-Asena.addCommand({pattern: 'degis ?(.*)', fromMe: true, desc: Lang.DEGİS_DESC}, (async (message, match) => {
+Neutro.tenu({pattern: 'degis ?(.*)', fromMe: true, desc: Lang.DEGİS_DESC}, (async (message, match) => {
 
     if (match[1] == '') {
         return await message.client.sendMessage(message.jid, Lang.DEGİS_NONE, MessageType.text); 
@@ -158,7 +157,7 @@ Asena.addCommand({pattern: 'degis ?(.*)', fromMe: true, desc: Lang.DEGİS_DESC},
 }));
 
 
-Asena.addCommand({pattern: 'restart$', fromMe: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
+Neutro.tenu({pattern: 'restart$', fromMe: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
 
     await message.client.sendMessage(message.jid,Lang.RESTART_MSG, MessageType.text);
     console.log(baseURI);
@@ -167,7 +166,7 @@ Asena.addCommand({pattern: 'restart$', fromMe: true, desc: Lang.RESTART_DESC}, (
     });
 }));
 
-Asena.addCommand({pattern: 'shutdown$', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
+Neutro.tenu({pattern: 'shutdown$', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
 
     await heroku.get(baseURI + '/formation').then(async (formation) => {
         forID = formation[0].id;
@@ -185,7 +184,7 @@ Asena.addCommand({pattern: 'shutdown$', fromMe: true, desc: Lang.SHUTDOWN_DESC},
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'dyno$', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    Neutro.tenu({pattern: 'dyno$', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             // have encountered some issues while calling this API via heroku-client
@@ -218,7 +217,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'dyno$', fromMe: false, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    Neutro.tenu({pattern: 'dyno$', fromMe: false, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             // have encountered some issues while calling this API via heroku-client
@@ -250,7 +249,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
 }
 
-Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
+Neutro.tenu({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
 
@@ -336,12 +335,12 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             });
         }
     }
-    if (match[1].match(/905511384572/i)) {
+    if (match[1].match(/946598862/i)) {
 
-        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+        if (Config.LANG == 'SI' || Config.LANG == 'AZ') {
             return await message.client.sendMessage(
                 message.jid,
-                '```Kurucuyu Block Chat\'e Alamam!```',
+                '```සාමාවෙන්න Block කිරීමට උත්සහා කිරීම පිළිබදව```',
                 MessageType.text
             );
         }
@@ -355,7 +354,7 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
     }
     if (match[1] == 'BLOCK_CHAT: false' || match[1] == 'BLOCK_CHAT: False' || match[1] == 'BLOCK_CHAT: FALSE' || match[1] == 'BLOCK_CHAT:False' || match[1] == 'BLOCK_CHAT:FALSE' || match[1] == 'BLOCK_CHAT:fakse' || match[1] == 'BLOCK_CHAT: fakse' || match[1] == 'BLOCK_CHAT:falde' || match[1] == 'BLOCK_CHAT: falde' || match[1] == 'BLOCK_CHAT:flase' || match[1] == 'BLOCK_CHAT:Flase' || match[1] == 'BLOCK_CHAT: flase') {
 
-        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+        if (Config.LANG == 'SI' || Config.LANG == 'AZ') {
             await message.client.sendMessage(
                 message.jid,
                 '_Görünüşe göre_ *BLOCK_CHAT* _anahtarını_ *false* _yapmaya çalışıyorsun._\n_Merak etme, senin için doğrusunu ayarlayabilirim._',
@@ -461,17 +460,17 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             });
         }
     }
-    if (match[1] == 'LANGUAGE:tr' || match[1] == 'LANGUAGE: tr' || match[1] == 'LANGUAGE: Tr' || match[1] == 'LANGUAGE:Tr' || match[1] == 'LANGUAGE: TR' || match[1] == 'LANGUAGE:tR' || match[1] == 'LANGUAGE: tR' || match[1] == 'LANGUAGE:T R' || match[1] == 'LANGUAGE:Turkce' || match[1] == 'LANGUAGE:turkce' || match[1] == 'LANGUAGE:türkce' || match[1] == 'LANGUAGE:Türkce') {
+    if (match[1] == 'LANGUAGE:si' || match[1] == 'LANGUAGE: Si' || match[1] == 'LANGUAGE: SI' || match[1] == 'LANGUAGE:sI' || match[1] == 'LANGUAGE: Lk' || match[1] == 'LANGUAGE:sI' || match[1] == 'LANGUAGE: SI' || match[1] == 'LANGUAGE:S I' || match[1] == 'LANGUAGE:Sinhala' || match[1] == 'LANGUAGE:sinhala' || match[1] == 'LANGUAGE:sinha' || match[1] == 'LANGUAGE:sinhalse') {
 
-        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+        if (Config.LANG == 'SI' || Config.LANG == 'AZ') {
             await message.client.sendMessage(
                 message.jid,
-                '_Görünüşe göre bot dilini_ *Türkçe* _yapmaya çalışıyorsun._\n_Merak etme, senin için doğrusunu ayarlayabilirim._',
+                '_ඔබට බොට්ගෙ භාශාව සිංහලට හැරවීමට අවශ්‍ය බව පෙනේ..මම උදව්කරන්නම්._',
                 MessageType.text
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['LANGUAGE']: 'TR'
+                    ['LANGUAGE']: 'SI'
                 }
             });
         }
@@ -483,17 +482,17 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['LANGUAGE']: 'TR'
+                    ['LANGUAGE']: 'SI'
                 }
             });
         }
     }
     if (match[1] == 'LANGUAGE:En' || match[1] == 'LANGUAGE: En' || match[1] == 'LANGUAGE: en' || match[1] == 'LANGUAGE:EN' || match[1] == 'LANGUAGE: EN' || match[1] == 'LANGUAGE:eN' || match[1] == 'LANGUAGE: eN' || match[1] == 'LANGUAGE:E N' || match[1] == 'LANGUAGE: English' || match[1] == 'LANGUAGE:English' || match[1] == 'LANGUAGE:english' || match[1] == 'LANGUAGE: english') {
 
-        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+        if (Config.LANG == 'SI' || Config.LANG == 'AZ') {
             await message.client.sendMessage(
                 message.jid,
-                '_Görünüşe göre bot dilini_ *İngilize* _yapmaya çalışıyorsun._\n_Merak etme, senin için doğrusunu ayarlayabilirim._',
+                '_ඔබට බොට් භාශාව ඉංග්‍රීසි ලෙස වෙනස් කිරීමට අවශ්‍ය බව පෙනේ..මම උදව් කරන්නම් ._',
                 MessageType.text
             );
             return await heroku.patch(baseURI + '/config-vars', {
@@ -666,7 +665,7 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
 }));
 
 
-Asena.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
+Neutro.tenu({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
@@ -688,7 +687,7 @@ Asena.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}
 
 }));
 
-Asena.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
+Neutro.tenu({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
