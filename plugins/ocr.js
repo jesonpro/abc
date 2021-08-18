@@ -5,7 +5,7 @@ you may not use this file except in compliance with the License.
 
 WhatsAsena - Yusuf Usta
 Thanks to github/@justinthoms for base and helps.
-*/
+
 
 const Asena = require('../events');
 const Config = require('../config');
@@ -123,3 +123,4 @@ else if (Config.WORKTYPE == 'public') {
         return await message.reply(Lang.RESULT.format(dil[2], result));
     }));
 }
+*/
