@@ -1,12 +1,10 @@
-/* Copyright (C) 2020 Yusuf Usta.
-
+/* Copyright (C) 2021 TENUX-Neotro.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
-WhatsAsena - Yusuf Usta
+NEOTROX - TEENUHX
 */
 
-const Asena = require('../events');
+const Neutro = require('../events');
 const Heroku = require('heroku-client');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
@@ -18,8 +16,8 @@ const Language = require('../language');
 const Lang = Language.getString('_plugin');
 const NLang = Language.getString('updater');
 
-let msg = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Resmi Olarak Onaylanmıştır!* ✅' : '*This Plugin is Officially Approved!* ✅'
-let unmsg = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Resmi Değildir!* ❌' : '*This Plugin isn\'t Officially Approved!* ❌'
+let msg = Config.LANG == 'SI' || Config.LANG == 'AZ' ? '*Bu Plugin Resmi Olarak Onaylanmıştır!* ✅' : '*This Plugin is Officially Approved!* ✅'
+let unmsg = Config.LANG == 'SI' || Config.LANG == 'AZ' ? '*Bu Plugin Resmi Değildir!* ❌' : '*This Plugin isn\'t Officially Approved!* ❌'
 
 const heroku = new Heroku({
     token: Config.HEROKU.API_KEY
@@ -27,15 +25,15 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 var LANG = {
-            unaffinfo: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Yüklenen Pluginin Tehlike Derecesi:* _%' : '*Danger Level of Installed Plugin:* _%',
-            harmful: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Zararlı Olduğundan Yüklenemez!*' : '*This Plugin Cannot Be Installed As It Is Harmful!*',
-            duplicate: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Aynı Plugini 2 Defa Yüklemeyezsiniz!*' : '*You Cannot Install the Same Plugin 2 Times!*',
-            limit: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Güvenlik Sınırını Aşıyor!*\n*Zararlılık Yüzdesi:* _%' : '*This Plugin Exceeds Security Limit!*\n*Percentage of Harm:* _%',
-            imside: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Varolan Pluginleri Tekrar Yükleyemezsin!*' : '*You Cant Reinstall Existing Plugins!*'
+            unaffinfo: Config.LANG == 'SI' || Config.LANG == 'AZ' ? '*Yüklenen Pluginin Tehlike Derecesi:* _%' : '*Danger Level of Installed Plugin:* _%',
+            harmful: Config.LANG == 'SI' || Config.LANG == 'AZ' ? '*Bu Plugin Zararlı Olduğundan Yüklenemez!*' : '*This Plugin Cannot Be Installed As It Is Harmful!*',
+            duplicate: Config.LANG == 'SI' || Config.LANG == 'AZ' ? '*Aynı Plugini 2 Defa Yüklemeyezsiniz!*' : '*You Cannot Install the Same Plugin 2 Times!*',
+            limit: Config.LANG == 'SI' || Config.LANG == 'AZ' ? '*Bu Plugin Güvenlik Sınırını Aşıyor!*\n*Zararlılık Yüzdesi:* _%' : '*This Plugin Exceeds Security Limit!*\n*Percentage of Harm:* _%',
+            imside: Config.LANG == 'SI' || Config.LANG == 'AZ' ? '*Varolan Pluginleri Tekrar Yükleyemezsin!*' : '*You Cant Reinstall Existing Plugins!*'
 };
-Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
+Neutro.tenu({pattern: 'pkg ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
 
-    if (match[1] == '') return await message.client.sendMessage(message.jid,Lang.NEED_URL + '.install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd', MessageType.text)
+    if (match[1] == '') return await message.client.sendMessage(message.jid,Lang.NEED_URL + '.install https://gist.github.com/Neotro23/4232b1c8c4734e1f06c3d991149c6fbd', MessageType.text)
     try {
         var url = new URL(match[1]);
     } catch {
@@ -61,7 +59,7 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
         try {
             require('./' + plugin_name);
         } catch (e) {
-            fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
+            fs.unlinkSync('/root/abc/plugins/' + plugin_name + '.js')
             return await message.client.sendMessage(message.jid,Lang.INVALID_PLUGIN + ' ```' + e + '```', MessageType.text);
         }
         var DEG = { level: 5 }
@@ -87,24 +85,24 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
         if (find.includes(plugin_name)) {
             await message.client.sendMessage(message.jid, LANG.duplicate, MessageType.text)
             await new Promise(r => setTimeout(r, 400))
-            fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
+            fs.unlinkSync('/root/abc/plugins/' + plugin_name + '.js')
         }
         else if (response.body.includes('formation') && !match[1].includes('phaticusthiccy')) {
             await message.client.sendMessage(message.jid, LANG.harmful, MessageType.text)
             await new Promise(r => setTimeout(r, 400))
-            fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
+            fs.unlinkSync('/root/abc/plugins/' + plugin_name + '.js')
         } 
         else if ((response.body.includes('commands.map') || response.body.includes('PluginDB') || response.body.includes('groupRemove') || response.body.includes('groupAdd') || response.body.includes('groupMakeAdmin') || response.body.includes('groupDemoteAdmin') || response.body.includes('groupSettingChange') || response.body.includes('groupInviteCode') || response.body.includes('Math.round((new Date()).getTime() / 1000)') || response.body.includes('https://thiccyscarbonapi.herokuapp.com/?code=') || response.body.includes('filtreler.map') || response.body.includes('heroku.delete') || response.body.includes('heroku.patch') || response.body.includes('Chrome/80.0.3987.149 Mobile Safari/537.36') || response.body.includes('groupLeave') || response.body.includes('updateProfilePicture') || response.body.includes('blockUser') || response.body.includes("Language.getString('system_stats')") || response.body.includes("commits['all'].map") || response.body.includes('await git.fetch') || response.body.includes('jids.push')) && !match[1].includes('phaticusthiccy')) {
             await message.client.sendMessage(message.jid, LANG.imside, MessageType.text)
             await new Promise(r => setTimeout(r, 400))
-            fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
+            fs.unlinkSync('/root/abc/plugins/' + plugin_name + '.js')
         } 
         else {
-            if (!match[1].includes('phaticusthiccy') && DEG.level > 99) {
+            if (!match[1].includes('Neotro23') && DEG.level > 99) {
                 await message.client.sendMessage(message.jid,LANG.limit + DEG.level + '_', MessageType.text)
-                fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
+                fs.unlinkSync('/root/abc/plugins/' + plugin_name + '.js')
             }
-            else if (!match[1].includes('phaticusthiccy') && DEG.level < 100) {
+            else if (!match[1].includes('Neotro23') && DEG.level < 100) {
                 await Db.installPlugin(url, plugin_name)
                 await new Promise(r => setTimeout(r, 400))
                 await message.client.sendMessage(message.jid, Lang.UNOFF, MessageType.text)
@@ -120,7 +118,7 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
     }
 }));
 
-Asena.addCommand({pattern: 'plugin$', fromMe: true, desc: Lang.PLUGIN_DESC}, (async (message, match) => {
+Neutro.tenu({pattern: 'plugin$', fromMe: true, desc: Lang.PLUGIN_DESC}, (async (message, match) => {
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
@@ -128,7 +126,7 @@ Asena.addCommand({pattern: 'plugin$', fromMe: true, desc: Lang.PLUGIN_DESC}, (as
     } else {
         plugins.map(
             (plugin) => {
-                let vf = plugin.dataValues.url.includes('phaticusthiccy') ? msg : unmsg
+                let vf = plugin.dataValues.url.includes('Neotro23') ? msg : unmsg
                 mesaj += '```' + plugin.dataValues.name + '```: ' + plugin.dataValues.url + '\n' + vf + '\n\n';
             }
         );
@@ -136,7 +134,7 @@ Asena.addCommand({pattern: 'plugin$', fromMe: true, desc: Lang.PLUGIN_DESC}, (as
     }
 }));
 
-Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
+Neutro.tenu({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
     try {
