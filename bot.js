@@ -668,7 +668,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
 
                                 if (error.message.includes('URL')) {
                                     return await conn.sendMessage(conn.user.jid, '*🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Only Absolutely URLs Supported_' +
                                         '\n*Nedeni:* _Medya araçlarının (xmedia, sticker..) LOG numarasında kullanılması._' +
                                         '\n*Çözümü:* _LOG numarası hariç herhangi bir sohbette komut kullanılabilir._'
@@ -677,7 +677,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('SSL')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _SQL Database Error_' +
                                         '\n*Nedeni:* _Database\'in bozulması._ ' +
                                         '\n*Solution:* _Bilinen herhangi bir çözümü yoktur. Yeniden kurmayı deneyebilirsiniz._'
@@ -686,7 +686,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('split')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Split of Undefined_' +
                                         '\n*Nedeni:* _Grup adminlerinin kullanabildiği komutların ara sıra split fonksiyonunu görememesi._ ' +
                                         '\n*Çözümü:* _Restart atmanız yeterli olacaktır._'
@@ -695,7 +695,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('Ookla')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Ookla Server Connection_' +
                                         '\n*Nedeni:* _Speedtest verilerinin sunucuya iletilememesi._' +
                                         '\n*Çözümü:* _Bir kez daha kullanırsanız sorun çözülecektir._'
@@ -704,7 +704,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('params')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Requested Audio Params_' +
                                         '\n*Nedeni:* _TTS komutunun latin alfabesi dışında kullanılması._' +
                                         '\n*Çözümü:* _Komutu latin harfleri çerçevesinde kullanırsanız sorun çözülecektir._'
@@ -713,7 +713,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('unlink')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _No Such File or Directory_' +
                                         '\n*Nedeni:* _Pluginin yanlış kodlanması._' +
                                         '\n*Çözümü:* _Lütfen plugininin kodlarını kontrol edin._'
@@ -722,7 +722,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('404')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Error 404 HTTPS_' +
                                         '\n*Nedeni:* _Heroku plugini altındaki komutların kullanılması sonucu sunucu ile iletişime geçilememesi._' +
                                         '\n*Çözümü:* _Biraz bekleyip tekrar deneyin. Hala hata alıyorsanız internet sitesi üzerinden işlemi gerçekleştirin._'
@@ -731,7 +731,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('reply.delete')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Reply Delete Function_' +
                                         '\n*Nedeni:* _IMG yada Wiki komutlarının kullanılması._' +
                                         '\n*Çözümü:* _Bu hatanın çözümü yoktur. Önemli bir hata değildir._'
@@ -740,7 +740,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('load.delete')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Reply Delete Function_' +
                                         '\n*Nedeni:* _IMG yada Wiki komutlarının kullanılması._' +
                                         '\n*Çözümü:* _Bu hatanın çözümü yoktur. Önemli bir hata değildir._'
@@ -749,7 +749,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('400')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Bailyes Action Error_ ' +
                                         '\n*Nedeni:* _Tam nedeni bilinmiyor. Birden fazla seçenek bu hatayı tetiklemiş olabilir._' +
                                         '\n*Çözümü:* _Bir kez daha kullanırsanız düzelebilir. Hata devam ediyorsa restart atmayı deneyebilirsiniz._'
@@ -758,7 +758,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('decode')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Cannot Decode Text or Media_' +
                                         '\n*Nedeni:* _Pluginin yanlış kullanımı._' +
                                         '\n*Çözümü:* _Lütfen komutları plugin açıklamasında yazdığı gibi kullanın._'
@@ -767,7 +767,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('unescaped')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*Ana Hata:* _Word Character Usage_' +
                                         '\n*Nedeni:* _TTP, ATTP gibi komutların latin alfabesi dışında kullanılması._' +
                                         '\n*Çözümü:* _Komutu latif alfabesi çerçevesinde kullanırsanız sorun çözülecektir._'
@@ -776,8 +776,8 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('conversation')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
-                                        '\n\n*Ana Hata:* _Deleting Plugin_' +
+                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
+                                        '\n\n*ප්‍රධාන දෝෂය:* _Deleting Plugin_' +
                                         '\n*Nedeni:* _Silinmek istenen plugin isminin yanlış girilmesi._' +
                                         '\n*Çözümü:* _Lütfen silmek istediğiniz pluginin başına_ *__* _koymadan deneyin. Hala hata alıyorsanız ismin sonundaki_ ```?(.*) / $``` _gibi ifadeleri eksiksiz girin._'
                                         , MessageType.text
