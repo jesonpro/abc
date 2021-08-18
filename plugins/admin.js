@@ -1591,3 +1591,4 @@ Asena.addCommand({pattern: 'invite ?(.*)', fromMe: true, onlyGroup: true, desc: 
 module.exports = {
     checkImAdmin: checkImAdmin
 };
+*/
