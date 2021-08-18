@@ -669,108 +669,108 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 if (error.message.includes('URL')) {
                                     return await conn.sendMessage(conn.user.jid, '*🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Only Absolutely URLs Supported_' +
-                                        '\n*Nedeni:* _Medya araçlarının (xmedia, sticker..) LOG numarasında kullanılması._' +
-                                        '\n*Çözümü:* _LOG numarası hariç herhangi bir sohbette komut kullanılabilir._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _Only Absolutely URLs Supported_' +
+                                        '\n*🎭හේතුව:* _LOG අංකයේ විධාන භාවිතය._' +
+                                        '\n*🧚‍♂️විසඳුම:*  _LOG අංකය හැර ඕනෑම චැට් එකකදී ඔබට විධානයන් භාවිතා කළ හැකිය.._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('SSL')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _SQL Database Error_' +
-                                        '\n*Nedeni:* _Database\'in bozulması._ ' +
-                                        '\n*Solution:* _Bilinen herhangi bir çözümü yoktur. Yeniden kurmayı deneyebilirsiniz._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _SQL Database Error_' +
+                                        '\n*🎭හේතුව:* _Database\'in Error._ ' +
+                                        '\n*🧚‍♂️විසඳුම:* _විසදුමක් සොයාගත නොහැකියි ඔබට හැකියි නැවත ආරම්භකිරීමට._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('split')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [WHATSASENA] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Split of Undefined_' +
-                                        '\n*Nedeni:* _Grup adminlerinin kullanabildiği komutların ara sıra split fonksiyonunu görememesi._ ' +
-                                        '\n*Çözümü:* _Restart atmanız yeterli olacaktır._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය* _Split of Undefined_' +
+                                        '\n*🎭හේතුව:* __Split සොයා ගත නොහැක._ ' +
+                                        '\n*🧚‍♂️විසඳුම:* _Restart කර බලන්න._'
                                         , MessageType.text
                                     );                               
                                 }
                                 else if (error.message.includes('Ookla')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Ookla Server Connection_' +
-                                        '\n*Nedeni:* _Speedtest verilerinin sunucuya iletilememesi._' +
-                                        '\n*Çözümü:* _Bir kez daha kullanırsanız sorun çözülecektir._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _Ookla Server Connection_' +
+                                        '\n*🎭හේතුව:* _සේවාදායකයට වේගවත්ම දත්ත සම්ප්‍රේෂණය කළ නොහැක.._' +
+                                        '\n*🧚‍♂️විසඳුම:* _ඔබ එය නැවත භාවිතා කලොත් ප්‍රශ්ණය විසදෙනු ඇත.._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('params')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Requested Audio Params_' +
-                                        '\n*Nedeni:* _TTS komutunun latin alfabesi dışında kullanılması._' +
-                                        '\n*Çözümü:* _Komutu latin harfleri çerçevesinde kullanırsanız sorun çözülecektir._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _Requested Audio Params_' +
+                                        '\n*🎭හේතුව:* _TTS komutunun latin alfabesi dışında kullanılması._' +
+                                        '\n*🧚‍♂️විසඳුම:* _Komutu latin harfleri çerçevesinde kullanırsanız sorun çözülecektir._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('unlink')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _No Such File or Directory_' +
-                                        '\n*Nedeni:* _Pluginin yanlış kodlanması._' +
-                                        '\n*Çözümü:* _Lütfen plugininin kodlarını kontrol edin._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _No Such File or Directory_' +
+                                        '\n*🎭හේතුව:* _Pluginin yanlış kodlanması._' +
+                                        '\n*🧚‍♂️විසඳුම:* _Lütfen plugininin kodlarını kontrol edin._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('404')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Error 404 HTTPS_' +
-                                        '\n*Nedeni:* _Heroku plugini altındaki komutların kullanılması sonucu sunucu ile iletişime geçilememesi._' +
-                                        '\n*Çözümü:* _Biraz bekleyip tekrar deneyin. Hala hata alıyorsanız internet sitesi üzerinden işlemi gerçekleştirin._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _Error 404 HTTPS_' +
+                                        '\n*🎭හේතුව:* _Heroku plugini altındaki komutların kullanılması sonucu sunucu ile iletişime geçilememesi._' +
+                                        '\n*🧚‍♂️විසඳුම:* _Biraz bekleyip tekrar deneyin. Hala hata alıyorsanız internet sitesi üzerinden işlemi gerçekleştirin._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('reply.delete')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Reply Delete Function_' +
-                                        '\n*Nedeni:* _IMG yada Wiki komutlarının kullanılması._' +
-                                        '\n*Çözümü:* _Bu hatanın çözümü yoktur. Önemli bir hata değildir._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _Reply Delete Function_' +
+                                        '\n*🎭හේතුව:* _IMG yada Wiki komutlarının kullanılması._' +
+                                        '\n*🧚‍♂️විසඳුම:* _Bu hatanın çözümü yoktur. Önemli bir hata değildir._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('load.delete')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Reply Delete Function_' +
-                                        '\n*Nedeni:* _IMG yada Wiki komutlarının kullanılması._' +
-                                        '\n*Çözümü:* _Bu hatanın çözümü yoktur. Önemli bir hata değildir._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _Reply Delete Function_' +
+                                        '\n*🎭හේතුව:* _IMG yada Wiki komutlarının kullanılması._' +
+                                        '\n*🧚‍♂️විසඳුම:* _Bu hatanın çözümü yoktur. Önemli bir hata değildir._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('400')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Bailyes Action Error_ ' +
-                                        '\n*Nedeni:* _Tam nedeni bilinmiyor. Birden fazla seçenek bu hatayı tetiklemiş olabilir._' +
-                                        '\n*Çözümü:* _Bir kez daha kullanırsanız düzelebilir. Hata devam ediyorsa restart atmayı deneyebilirsiniz._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _Bailyes Action Error_ ' +
+                                        '\n*🎭හේතුව:* _Tam nedeni bilinmiyor. Birden fazla seçenek bu hatayı tetiklemiş olabilir._' +
+                                        '\n*🧚‍♂️විසඳුම:* _Bir kez daha kullanırsanız düzelebilir. Hata devam ediyorsa restart atmayı deneyebilirsiniz._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('decode')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Cannot Decode Text or Media_' +
-                                        '\n*Nedeni:* _Pluginin yanlış kullanımı._' +
-                                        '\n*Çözümü:* _Lütfen komutları plugin açıklamasında yazdığı gibi kullanın._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _Cannot Decode Text or Media_' +
+                                        '\n*🎭හේතුව:* _Pluginin yanlış kullanımı._' +
+                                        '\n*🧚‍♂️විසඳුම:* _Lütfen komutları plugin açıklamasında yazdığı gibi kullanın._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('unescaped')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
-                                        '\n\n*Ana Hata:* _Word Character Usage_' +
-                                        '\n*Nedeni:* _TTP, ATTP gibi komutların latin alfabesi dışında kullanılması._' +
-                                        '\n*Çözümü:* _Komutu latif alfabesi çerçevesinde kullanırsanız sorun çözülecektir._'
+                                        '\n\n*🚫ප්‍රධාන දෝෂය:* _Word Character Usage_' +
+                                        '\n*🎭හේතුව:* _TTP, ATTP gibi komutların latin alfabesi dışında kullanılması._' +
+                                        '\n*🧚‍♂️විසඳුම:* _Komutu latif alfabesi çerçevesinde kullanırsanız sorun çözülecektir._'
                                         , MessageType.text
                                     );
                                 }
@@ -778,8 +778,8 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ 🙇දෝශ විශ්ලේෂණය [🎭Neotro-X] ⚕️*' + 
                                         '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
                                         '\n\n*ප්‍රධාන දෝෂය:* _Deleting Plugin_' +
-                                        '\n*Nedeni:* _Silinmek istenen plugin isminin yanlış girilmesi._' +
-                                        '\n*Çözümü:* _Lütfen silmek istediğiniz pluginin başına_ *__* _koymadan deneyin. Hala hata alıyorsanız ismin sonundaki_ ```?(.*) / $``` _gibi ifadeleri eksiksiz girin._'
+                                        '\n*🎭හේතුව:* _Silinmek istenen plugin isminin yanlış girilmesi._' +
+                                        '\n*🧚‍♂️විසඳුම:* _Lütfen silmek istediğiniz pluginin başına_ *__* _koymadan deneyin. Hala hata alıyorsanız ismin sonundaki_ ```?(.*) / $``` _gibi ifadeleri eksiksiz girin._'
                                         , MessageType.text
                                     );
                                 }
@@ -791,12 +791,12 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                             }
                             else {
-                                await conn.sendMessage(conn.user.jid, '*-- Your Bot Working Perfectly [🎭Neotro-X] --*' + 
-                                    '\n*🎭Neotro-X නිසි ලෙස ක්‍රියා කරයි!*'+
-                                    '\n_මෙය LOG අංකයයි.. මෙහි පණිවිඩ පිළිබඳව සැලකිලිමත් වන්න..!_' +
-                                    '\n_ඔබට යම් ගැටලුවක් ඇත්නම් අපගේ සහය සමූහයට සම්බන්ධ වන්න.._' +
-                                    '\n_සහය සමූහය_: https://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX' +
-                                    '\n_(සුරැකි පණිවිඩ)._\n\n' +
+                                await conn.sendMessage(conn.user.jid, '*-- Bot Report  [🎭Neotro-X] --*' + 
+                                    '\n*🎭Neotro-X Working Perfectly!*'+
+                                    '\n_This is your LOG Number.. මෙහි පණිවිඩ පිළිබඳව සැලකිලිමත් වන්න..!_' +
+                                    '\n_You can write to our support groups for more help.._' +
+                                    '\n_Support Group_: https://chat.whatsapp.com/GTgqgMTo7FoJ1GqdijshsX' +
+                                    '\n_(Saved Messages)._\n\n' +
                                     '*Error:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false}
                                 );
@@ -910,7 +910,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                 }
                                 else if (error.message.includes('unescaped')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [🎭Neotro-X] ⚕️*' + 
-                                        '\n========== ```🙇දෝශ විශ්ලේෂණය!``` ==========' +
+                                        '\n========== ```🙇ERROR ANALYSIS!``` ==========' +
                                         '\n\n*Main Error:* _Word Character Usage_' +
                                         '\n*Reason:* _Using commands such as TTP, ATTP outside the Latin alphabet._' +
                                         '\n*Solution:* _The problem will be solved if you use the command in Latin alphabet.._'
@@ -918,8 +918,8 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                     );
                                 }
                                 else {
-                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 කණගාටුයි..! Auto error පද්ධතියට හදුනාගත නොහැකියි..🙇🏻*' +
-                                        '\n_ඔබට පුලුවන් වැඩිදුර උදව් සදහා සහය සමූහයන්ට ලියන්න..._'
+                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 I CAN'T READ THIS ERROR 🙇🏻*' +
+                                        '\n_You can write to our support groups for more help..._'
                                         , MessageType.text
                                     );
                                 }    
