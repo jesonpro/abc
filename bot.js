@@ -918,7 +918,7 @@ ${chalk.blue.italic('🙇Connecting Whatsapp..')}`);
                                     );
                                 }
                                 else {
-                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 I CAN'T READ THIS ERROR 🙇🏻*' +
+                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 I CANT READ THIS ERROR 🙇🏻*' +
                                         '\n_You can write to our support groups for more help..._'
                                         , MessageType.text
                                     );
