@@ -1,6 +1,6 @@
 {
   "name": "abc",
-  "version": "5.3.2",
+  "version": "3.4.1",
   "description": "WhatsAsena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
   "main": "./abc/bot.js",
   "scripts": {
